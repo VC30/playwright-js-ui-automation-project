@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
     await lp.launchWebsite();
 })
 
-test('Landing Page Test', async ({ page }) => {
+test.only('Landing Page Test', async ({ page }) => {
     //LANDING PAGE
     const lp = new landingPage(page);
     const title = await lp.checkTitle();
