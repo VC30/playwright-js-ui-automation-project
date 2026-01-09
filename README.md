@@ -4,6 +4,7 @@
 This project is an end-to-end UI automation framework built using Playwright with JavaScript.
 It automates critical user flows on the demo application:
 https://freelance-learn-automation.vercel.app/
+
 The framework follows Page Object Model (POM) and industry best practices.
 
 #Tech Stack
