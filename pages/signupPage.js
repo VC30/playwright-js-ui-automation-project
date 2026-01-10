@@ -7,7 +7,8 @@ class signupPage{
         this.interestCheckboxes=".interest"
         this.genderRadioBtn="#gender2"
         this.stateDrpDwn="#state"
-        this.hobbiesList="//*[@id='hobbies']//option"
+        //this.hobbiesList="//*[@id='hobbies']//option"
+        this.hobbiesDrpDwn="#hobbies"
         this.signUpButton=".submit-btn"
     }
 
@@ -29,11 +30,11 @@ class signupPage{
         await this.page.check(this.genderRadioBtn);
         await this.page.selectOption(this.stateDrpDwn, {label: state});
 
+        await this.page.selectOption(this.hobbiesDrpDwn, hobbies);
+        /* THIS IS AN INTERESTING APPROACH TO SELECT MULTIPLE OPTIONS FROM DROPDOWN
+        
         const hobbiesOptions = await this.page.$$(this.hobbiesList);
         const hobbiesToSelect = hobbies.map(h => h.toLowerCase());
-
-        
-
         for(const hobbiesOption of hobbiesOptions){
             const hobbiesText = (await hobbiesOption.textContent()).toLowerCase();
             if(hobbiesToSelect.includes(hobbiesText)){
@@ -43,12 +44,10 @@ class signupPage{
                 await hobbiesOption.click();
                 // Release Shift after selection
                 await this.page.keyboard.up('Meta');
-
             }
         }
-        
-
-        await this.page.waitForTimeout(3000);
+        */
+        //await this.page.waitForTimeout(3000);
         await this.page.click(this.signUpButton);
     }
 
