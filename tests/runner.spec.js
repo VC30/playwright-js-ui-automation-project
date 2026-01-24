@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { landingPage } from '../pages/landingPage';
 import { loginPage } from '../pages/loginPage';
 import { homePage } from '../pages/homePage';
-import { signupPage } from '../pages/signUpPage';
+import { signupPage } from '../pages/signupPage';
 import {managecoursePage} from '../pages/managecoursePage';
 import { manageCategoryPage } from '../pages/manageCategoryPage';
 import { adminUser } from "../test-data/userData"
